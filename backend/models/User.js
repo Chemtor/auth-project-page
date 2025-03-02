@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: [4, 'Password must be at least 4 characters']
     },
-    role: {
+    role : {
         type: String,
         enum: ['user', 'admin'],
         default: 'user'
