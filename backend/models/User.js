@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email address']
     },
-    passwaord : {
+    password : {
         type: String,
         required: true,
         minlength: [4, 'Password must be at least 4 characters']
@@ -29,4 +29,4 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
