@@ -1,19 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ccc;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(9, 73, 102, 0.1)), url(src/img/bg_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
+    background: rgba(42, 172, 223, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ */
     text-align: center;
+    color: #121e5f;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Viền trắng mờ */
+    background: linear-gradient(135deg, rgba(123, 208, 227, 0.2), rgba(9, 73, 102, 0.1));
 }
 
 h1 {
@@ -24,13 +38,19 @@ input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
     border-radius: 4px;
+    background: rgb(0, 0, 0, 0.15);
+    /* border: none; */
+}
+
+input:focus {
+    /* border: 3px solid rgb(0, 0, 0, 0.15); */
+    outline: none;
 }
 
 .btn {
-    background: #007bff;
-    color: #fff;
+    background: rgba(64, 156, 218, 0.2);
+    backdrop-filter: blur(30px);
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -39,7 +59,7 @@ input {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: rgba(40, 143, 212, 0.2);
 }
 
 p {
