@@ -5,16 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Login</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" href="/frontend/src/img/favicon.png" type="image/png" />
     </head>
     <body>
-        <div class="container">
+        <div class="header">
+            <img
+                class="logo"
+                src="https://unknownworlds.com/_next/image?url=https%3A%2F%2Fd17c72h1ypygg7.cloudfront.net%2FUW_Logo_Stacked_White_b547ba5850.png&w=1368&q=75"
+                alt="" />
+            <ul>
+                <li><a href="http://">Home</a></li>
+                <li><a href="http://">Game</a></li>
+                <li><a href="http://">About</a></li>
+            </ul>
+            <button class="btn-explore">Explore</button>
+        </div>
+        <div class="container fade-in">
             <h1>Login</h1>
             <form id="loginForm">
-                <input type="text" id="username" placeholder="Username" required />
-                <input type="password" id="password" placeholder="Password" required />
-                <button type="submit" class="btn">Login</button>
+                <div class="input-field">
+                    <input type="text" required />
+                    <label for="" class="">Enter your email</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" required />
+                    <label for="" class="">Enter your password</label>
+                </div>
             </form>
-            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <div class="password-option">
+                <label for="remember">
+                    <input type="checkbox" name="" id="remember" />
+                    <p>Remember me</p>
+                </label>
+                <a href="http://">Forgot password?</a>
+            </div>
+            <button class="submit-login-btn">Login</button>
+            <div class="no-account">
+                <p>Don't have an account? <a href="register.html">Register here</a></p>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

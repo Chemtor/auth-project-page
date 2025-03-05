@@ -18,6 +18,83 @@ body {
     height: 100vh;
 }
 
+.header {
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(180deg, #051a3d, transparent);
+    backdrop-filter: blur(1rem);
+    grid-template-columns: auto 1fr auto; /* Logo bên trái, menu giữa, nút bên phải */
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+}
+
+.header ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul li {
+    margin: 10px 20px;
+    color: #fff;
+}
+
+.header ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.header ul li a:hover {
+    background-color: rgba(33, 23, 100, 0.2); /* Màu nền khi hover */
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 12px 48px;
+    background: linear-gradient(85.75deg, #ff3975 2.06%, #8346fe 95.46%);
+    border-radius: 10px;
+    transition: background-position 1s ease;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-explore:hover {
+    background-position: 100% 0; /* Di chuyển background */
+}
+
+.fade-in {
+    opacity: 0; /* Ẩn thẻ ban đầu */
+    transform: translateY(20px); /* Di chuyển từ dưới lên */
+    animation: fadeIn 0.8s ease-in-out 0.2s forwards; /* Delay 0.5s */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container {
     background: rgba(42, 172, 223, 0.1);
     backdrop-filter: blur(5px);
@@ -34,18 +111,99 @@ h1 {
     margin-bottom: 20px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
-    background: rgb(0, 0, 0, 0.15);
-    /* border: none; */
+.input-field {
+    position: relative;
+    margin: 15px 0;
+    border-bottom: 2px solid #ccc;
 }
 
-input:focus {
-    /* border: 3px solid rgb(0, 0, 0, 0.15); */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field input {
+    width: 150%;
+    height: 40px;
+    background: transparent;
+    border: none;
     outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    transform: translateY(-120%);
+    top: 10px;
+    font-size: 0.7rem;
+}
+
+.password-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.password-option label {
+    display: flex;
+    align-items: center;
+}
+
+.password-option label p {
+    margin-top: 0;
+    margin-left: 8px;
+}
+
+.password-option a {
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.password-option a:hover {
+    text-decoration: underline;
+}
+
+.submit-login-btn {
+    width: 50%;
+    font-weight: 600;
+    color: #121e5f;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+.submit-login-btn:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: #ccc;
+    border-color: #fff;
+}
+
+.no-account {
+    margin-top: 30px;
+    font-size: 0.75rem;
+}
+
+.no-account a {
+    text-decoration: none;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+    transition: 0.3s ease;
 }
 
 .btn {
