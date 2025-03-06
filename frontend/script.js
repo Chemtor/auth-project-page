@@ -62,3 +62,19 @@ document.getElementById('logoutBtn')?.addEventListener('click', () => {
   localStorage.removeItem('token');
   window.location.href = 'index.html';
 });
+
+document.getElementById('showRegisterForm').addEventListener('click', function(event) {
+  event.preventDefault();
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  loginForm.style.display = 'none';
+  registerForm.style.display = 'flex';
+});
+
+document.getElementById('showLoginForm').addEventListener('click', function(event) {
+  event.preventDefault();
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  loginForm.style.display = 'flex';
+  registerForm.style.display = 'none';
+});

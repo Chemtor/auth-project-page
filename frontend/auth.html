@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <title>Login</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" href="/frontend/src/img/favicon.png" type="image/png" />
+    </head>
+    <body>
+        <div class="header">
+            <img
+                class="logo"
+                src="https://unknownworlds.com/_next/image?url=https%3A%2F%2Fd17c72h1ypygg7.cloudfront.net%2FUW_Logo_Stacked_White_b547ba5850.png&w=1368&q=75"
+                alt="" />
+            <ul>
+                <li>
+                    <a href="#"><span class="material-icons icon-gg">home</span>Home</a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined icon-gg"> stadia_controller </span>Game</a>
+                </li>
+                <li>
+                    <a href="#"><span class="material-symbols-outlined icon-gg"> data_loss_prevention </span>About</a>
+                </li>
+            </ul>
+            <button class="btn-explore">
+                <span class="material-symbols-outlined icon-gg"> login </span>
+                <span id="login-text">Login</span>
+            </button>
+        </div>
+        <div class="welcome-section" style="display: none">
+            <p>Welcome to Unknown Worlds</p>
+        </div>
+        <div class="container">
+            <form id="loginForm" class="form fade-in">
+                <h1>Login</h1>
+                <div class="input-field">
+                    <input type="text" required />
+                    <label for="" class="">Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required />
+                    <label for="" class="">Enter your password</label>
+                </div>
+                <div class="password-option">
+                    <label for="remember">
+                        <input type="checkbox" name="" id="remember" />
+                        <p>Remember me</p>
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <div class="account-option">
+                    <p>Don't have an account? <a href="#" id="showRegisterForm">Register here</a></p>
+                </div>
+            </form>
+            <form id="registerForm" class="form fade-in" style="display: none">
+                <h1>Register</h1>
+                <div class="input-field">
+                    <input type="text" required />
+                    <label for="" class="">Enter your username</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" required />
+                    <label for="" class="">Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required />
+                    <label for="" class="">Enter your password</label>
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+                <div class="account-option">
+                    <p>Already have an account? <a href="#" id="showLoginForm">Login here</a></p>
+                </div>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
