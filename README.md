@@ -1,1 +1,1 @@
-# auth-project-paga
+# auth-project-page
