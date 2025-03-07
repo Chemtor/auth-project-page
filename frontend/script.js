@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:8080/api'; // Địa chỉ backend
 
 // Đăng ký người dùng
-document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
+document.getElementById('registerForm')?.addEventListener('click', async (e) => {
   e.preventDefault();
   const username = document.getElementById('username').value;
   const email = document.getElementById('email').value;
@@ -50,7 +50,12 @@ if (token && window.location.pathname.includes('dashboard.html')) {
   })
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById('userInfo').textContent = `Welcome, ${data.username} (${data.role})`;
+      const userInfo = document.getElementById('userInfo');
+      userInfo.innerHTML = `
+      <p>Username: ${data.username}</p>
+      <p>Email: ${data.email}</p>
+      <p>Role: ${data.role}</p>
+    `
     })
     .catch(() => {
       alert('Failed to fetch user info.');
@@ -60,7 +65,14 @@ if (token && window.location.pathname.includes('dashboard.html')) {
 // Đăng xuất
 document.getElementById('logoutBtn')?.addEventListener('click', () => {
   localStorage.removeItem('token');
-  window.location.href = 'index.html';
+  window.location.href = 'auth.html';
+});
+
+document.getElementById('login-btn-header').addEventListener('click', () => {
+  const loginForm = document.getElementById('loginForm');
+  const welcomeHero = document.getElementById('welcome-text-hero');
+  welcomeHero.style.display = 'none';
+  loginForm.style.display = 'flex';
 });
 
 document.getElementById('showRegisterForm').addEventListener('click', function(event) {
